@@ -1,34 +1,54 @@
 #Kata Bootstrap for CPP and Google Test
 
-This is a bootstrap project for CPP kata's using Google Test.
+This is a bootstrap project for kata's in CPP  using Google Test.
+
+The project makes use of [Conan.io](https://conan.io/) to download the Google Test library as a dependency.
 
 # Basic Setup
 
-Conan.io is used to handle project dependencies. To install Conan.io:
+To install Conan:
 
 ```
 $ pip install conan
 ```
 
-To install the Google Test dependency:
+# Build
+
+To build the project:
 
 ```
-$ conan install . --build=gtest
+$ mkdir build
+$ cd build
+# only on the first time
+$ conan install .. --build=gtest
+$ cmake .. && make
 ```
 
-# Generate Makefile
+All of this is also done by `./build.sh`.
+
+After having build the project for the first time, you can rebuild it from the `./build` folder using `make`:
 
 ```
-$ cmake .
+$ cd build
+$ make
 ```
 
 # Run unit tests
 
+To run the unit tests:
 ```
+$ cd build
 $ make test
 ```
 
-or if you want more verbosity:
+or
+
+```
+$ cd build
+$ ctest
+```
+
+If you want more verbosity:
 
 ```
 $ ctest -V

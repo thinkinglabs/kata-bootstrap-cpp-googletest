@@ -1,15 +1,2 @@
-bin/
-
-# conanio
-conanbuildinfo.cmake
-conanbuildinfo.txt
-conaninfo.txt
-
-# CMake
-CMakeCache.txt
-CMakeFiles/
-CTestTestfile.cmake
-Makefile
-Testing/
-cmake_install.cmake
+build/
 
