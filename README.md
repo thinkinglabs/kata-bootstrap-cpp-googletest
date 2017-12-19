@@ -54,3 +54,11 @@ If you want more verbosity:
 $ ctest -V
 ```
 
+# Clean up
+
+To clean up the project, just delete the `./build` folder:
+
+```
+$ rm -rf build
+```
+
