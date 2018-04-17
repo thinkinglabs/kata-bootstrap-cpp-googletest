@@ -17,11 +17,7 @@ $ pip install conan
 To build the project:
 
 ```
-$ mkdir build
-$ cd build
-# only on the first time
-$ conan install .. --build=gtest
-$ cmake .. && make
+$ conan install . --build=gtest -if ./build && conan build . -bf ./build
 ```
 
 All of this is also done by `./build.sh`.

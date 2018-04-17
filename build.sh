@@ -1,7 +1,4 @@
-#! /bin/bash
+#!/usr/bin/env bash
 
-mkdir build
-pushd build
-conan install .. --build=gtest
-cmake .. && make
-popd
+conan install . --build=gtest -if ./build && conan build . -bf ./build
+
