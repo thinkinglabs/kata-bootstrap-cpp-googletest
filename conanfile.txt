@@ -1,10 +1,9 @@
 [requires]
-gtest/1.8.0@lasote/stable
+gtest/1.8.0@bincrafters/stable
 
 [options]
 gtest:shared=False
-gtest:no_gmock=True # don't include Google Mock
-gtest:no_main=True # don't link with main() provided by gtest/gmock
+gtest:build_gmock=True # include Google Mock
 
 [generators]
 txt
